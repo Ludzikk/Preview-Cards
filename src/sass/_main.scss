@@ -1,0 +1,88 @@
+@use "./colors" as *;
+
+.main {
+  padding: 2em;
+  color: $Verylightgray;
+}
+
+.cards {
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 2em;
+
+    &--orange {
+      background-color: $Brightorange;
+    }
+
+    &--blue {
+      background-color: $Darkcyan;
+    }
+
+    &--green {
+      background-color: $Verydarkcyan;
+    }
+  }
+
+  &__title {
+    padding: 0.5em 0;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding-bottom: 2em;
+    font-size: 1.4rem;
+    color: $Transparentwhite;
+  }
+
+  &__btn {
+    padding: 1em 2em;
+    border-radius: 30px;
+    border: 1px solid $Verylightgray;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+
+    &--orange {
+      color: $Brightorange;
+    }
+
+    &--blue {
+      color: $Darkcyan;
+    }
+
+    &--green {
+      color: $Verydarkcyan;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .cards {
+    margin: 0 auto;
+    margin-top: 5em;
+    max-width: 750px;
+
+    &__list {
+      display: flex;
+    }
+
+    &__text {
+        padding-bottom: 6em;
+        font-size: 1.6rem;
+    }
+  }
+}
